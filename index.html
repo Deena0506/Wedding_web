@@ -9,123 +9,125 @@
     body {
         margin: 0;
         font-family: "Poppins", sans-serif;
-        height: 100vh;
-        overflow: hidden;
+        background: url("Couple.jpg") center/cover no-repeat fixed;
+        padding: 20px;
     }
 
-    /* Background image */
-    .bg-image {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        background: url("Couple.jpg") no-repeat center center/cover;
-        filter: brightness(0.65);
-        z-index: -1;
-    }
-
-    /* Bottom Sheet */
-    .sheet {
-        position: fixed;
-        bottom: -68%;
-        left: 0;
-        width: 100%;
-        height: 68%;
-        background: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(25px);
-        border-radius: 35px 35px 0 0;
-        padding: 35px 25px;
+    /* Glass Card */
+    .card {
+        max-width: 380px;
+        margin: 50px auto;
+        padding: 25px 30px;
+        border-radius: 25px;
+        backdrop-filter: blur(18px);
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
         text-align: center;
-        transition: bottom 0.5s ease;
-        box-shadow: 0 -25px 50px rgba(0,0,0,0.4);
-    }
-
-    .drag {
-        width: 75px;
-        height: 7px;
-        background: rgba(255,255,255,0.8);
-        border-radius: 10px;
-        margin: -10px auto 20px auto;
-    }
-
-    .title {
-        font-size: 34px;
-        font-weight: 700;
-        color: #ff47df;
-        text-shadow: 0 3px 12px rgba(0,0,0,0.5);
-        margin-bottom: 8px;
-    }
-
-    p, .verse {
         color: white;
-        margin: 6px 0;
     }
 
-    .section {
+    .names {
+        font-size: 32px;
+        font-family: "Great Vibes", cursive;
+        font-weight: 600;
+        color: rgb(252, 2, 218);
+        letter-spacing: 2px;
+        word-spacing: 3px;
+        margin-bottom: 10px;
+        text-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
+
+    .date {
+        font-size: 18px;
+        opacity: 0.9;
+        text-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
+
+    .line {
+        width: 80%;
+        height: 1px;
+        background: rgba(255,255,255,0.4);
+        margin: 18px auto;
+    }
+
+    .section-title {
         font-size: 22px;
         font-weight: 700;
-        margin-top: 22px;
-        color: white;
+        margin: 10px 0;
+        color: #ffd6fc;
+        text-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
+
+    p {
+        margin: 6px 0;
+        opacity: 0.9;
+        font-size: 20px;
+        font-weight: 200;
+        text-shadow: 0 0 8px rgba(0,0,0,0.4);
     }
 
     .btn {
-        background: #ff47df;
-        color: white;
-        padding: 15px;
-        width: 90%;
-        margin: 15px auto;
         display: block;
-        border-radius: 14px;
-        font-size: 18px;
+        margin: 12px auto;
+        padding: 12px 20px;
+        width: 85%;
+        border-radius: 12px;
+        background: rgba(255, 0, 200, 0.45);
+        color: white;
         font-weight: 600;
         text-decoration: none;
-        box-shadow: 0 5px 20px rgba(255,71,223,0.5);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 4px 18px rgba(255, 0, 200, 0.45);
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        transform: scale(1.04);
+        background: rgba(255, 0, 200, 0.6);
     }
 
     .verse {
-        margin-top: 20px;
+        margin-top: 12px;
         font-style: italic;
         font-size: 14px;
-        opacity: 0.9;
+        opacity: 0.85;
     }
 </style>
-</head>
 
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+</head>
 <body>
 
-<div class="bg-image"></div>
+<div class="card">
+    <div class="names">Nelson & Mystica</div>
+    <div class="date">December 28, 2025</div>
 
-<div class="sheet" id="sheet">
-    <div class="drag" id="drag"></div>
+    <div class="line"></div>
 
-    <div class="title">Nelson & Mystica</div>
-    <p>December 28, 2025</p>
+    <div class="section-title">Wedding</div>
+    <p>St. Joseph Church, Barracks</p>
+    <p>11:00 AM</p>
 
-    <div class="section">Wedding</div>
-    <p>St. Joseph Church, Barracks<br>11:00 AM</p>
     <a class="btn" href="https://maps.app.goo.gl/jYotbpXt3JxQWRKf8" target="_blank">
-        Open Wedding Location
+        Wedding Location
     </a>
 
-    <div class="section">Reception</div>
-    <p>Community Hall, Singarathoppu, Barracks<br>12:30 PM</p>
+    <div class="line"></div>
+
+    <div class="section-title">Reception</div>
+    <p>Community Hall, Singarathoppu, Barracks</p>
+    <p>12:30 PM</p>
+
     <a class="btn" href="https://maps.app.goo.gl/hzSNFzxRJo98YTAB7" target="_blank">
-        Open Reception Location
+        Reception Location
     </a>
 
     <div class="verse">
-        “Be devoted to one another in love. Honor one another above yourselves.” — Romans 12:10
+        “Be devoted to one another in love. Honor one another above yourselves.” - Romans 12:10
     </div>
 </div>
-
-<script>
-    const sheet = document.getElementById("sheet");
-    const drag = document.getElementById("drag");
-
-    drag.addEventListener("click", () => {
-        sheet.style.bottom = sheet.style.bottom === "0px" ? "-68%" : "0px";
-    });
-</script>
 
 </body>
 </html>
